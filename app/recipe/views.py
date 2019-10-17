@@ -21,6 +21,7 @@ class BaseRecipeAttrViewSet(viewsets.GenericViewSet,
         """Create a new tag"""
         serializer.save(user=self.request.user)
 
+
 class TagViewSet(BaseRecipeAttrViewSet):
     """Manage tags in the database"""
     queryset = Tag.objects.all()
